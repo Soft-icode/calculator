@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="web calculator,  Calculator, Glassmorphism calculator, Addition, Subtraction, Multiplication, Division">
+    <title>SOFT CODE Calculator</title>
+    <link rel="stylesheet" type="text/css" href="calcuator.css">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'poppins';
+}
+body {
+    height: 100%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, rgb(133, 109, 133), rgb(41, 1, 41));
+  
+}
+.container{
+    z-index: 12;
+    width: 350px;
+    padding: 15px;
+    border-radius: 12px;
+    background-image: linear-gradient(to top right, purple, black);
+    box-shadow:  0 2px 4px black, 0 8px 16px black;
+    border-top: 1px solid black;
+    margin: 1em;
+}
+.container input[type='text']{
+    width: 100%;
+    height: 100px;
+    border: none;
+    outline: none;
+    color: rgb(230, 238, 229);
+    font-size: 20px;
+   background-image: linear-gradient(to bottom right, rgb(228, 57, 57),rgb(77, 43, 20));
+    border-radius: 8px;
+}
+.container input[type="button"]{
+    height: 60px;
+    color: #ffffff;
+    width: calc(100% / 4 - 5px);
+    background: transparent;
+    border-radius: 12px;
+    margin-top: 15px;
+    outline: none;
+    border: none;
+   font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .container input[type="button"]:hover{
+    background: rgba(255, 255, 255, 0.1);
+  }  
+  .container {
+      text-align: center;
+  }
+  
+  .container p {
+      font-size: 1em;
+      text-align: center;
+      color: #fff;
+  }
+  
+  .container h1 {
+      color: #f7f0f0;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      }
+      img{
+       width: 70px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: purple;
+        
+     }
+      
+</style>
+</head>
+<body>
+<div class="container">
+    <img src="img/calculatoricon.png" alt="calculatoricon">
+     <h1> SOft-cal( )</h1>
+     <p>Created by soft tech</p>
+  <form action="#" name="forms">
+    <input readonly type="text" name="answer">
+    <div class="buttons">
+        <input type="button" value="AC" onclick="forms.answer.value = ''">
+        <input type="button" value="DEL" onclick="forms.answer.value = forms.answer.value.substr(0 , forms.answer.value.length -1)">
+        <input type="button" value="%" onclick="forms.answer.value += '/100'">
+        <input type="button" value="/" onclick="forms.answer.value += '/'">
+      </div>
+<div class="buttons">
+    <input  type="button"  value="9"   onclick="forms.answer.value+= '9'">
+    <input  type="button"  value="8"   onclick="forms.answer.value+= '8'">
+    <input  type="button"  value="7"   onclick="forms.answer.value+= '7'">
+    <input  type="button"  value="*"   onclick="forms.answer.value+= '*'">
+</div>
+<div class="buttons">
+    <input  type="button"  value="4"   onclick="forms.answer.value+= '4'">
+    <input  type="button"  value="5"   onclick="forms.answer.value+= '5'">
+    <input  type="button"  value="6"   onclick="forms.answer.value+= '6'">
+    <input  type="button"  value="+"   onclick="forms.answer.value+= '+'">
+</div>
+<div class="buttons">
+    <input  type="button"  value="3"   onclick="forms.answer.value+= '3'">
+    <input  type="button"  value="2"   onclick="forms.answer.value+= '2'">
+    <input  type="button"  value="1"   onclick="forms.answer.value+= '1'">
+    <input  type="button"  value="-"   onclick="forms.answer.value+= '-'">
+</div>
+<div class="buttons">
+    <input  type="button"  value="0"   onclick="forms.answer.value+= '0'">
+    <input  type="button"  value="00"   onclick="forms.answer.value+= '00'">
+    <input  type="button"  value="."   onclick="forms.answer.value+= '.'">
+    <input type="button" value="=" onclick="forms.answer.value = eval(forms.answer.value)">
+</div>
+     </form>
+
+</div>
+
+
+
+
+
+<footer>
+    &copy; copyright byTumise
+   </footer>
+
+
+
+
+
+</body>
+</html>
