@@ -49,6 +49,9 @@ body {
   .container input[type="button"]:hover{
     background: rgba(255, 255, 255, 0.1);
   }  
+.container input[name="answer"]{
+    text-align: center;
+}
   .container {
       text-align: center;
   }
